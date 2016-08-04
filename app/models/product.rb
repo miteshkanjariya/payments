@@ -8,7 +8,7 @@ class Product < ApplicationRecord
     :return => return_url,
     :rm => 2,
     :invoice => SecureRandom.uuid,
-    #:notify_url => notify_url,
+    :notify_url => notify_url,
     :cancel_return => cancel_return
     }
     values.merge!({
