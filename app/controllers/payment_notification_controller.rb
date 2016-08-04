@@ -25,5 +25,10 @@ class PaymentNotificationController < ApplicationController
 
   def payment_return
     puts "************PAYMENT-RETURN*************"
+    if params[:payment_status] == 'Completed'
+        redirect_to root_url, notice: 'Success!'
+      else
+        redirect_to root_url, notice: 'Error'
+    end
   end
 end
